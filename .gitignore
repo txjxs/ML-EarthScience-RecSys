@@ -1,0 +1,14 @@
+.venv/
+pycache/
+*.log
+*.sqlite
+.DS_Store
+*.json
+*.csv
+*.pt
+*.pth
+*.h5
+data/
+models/
+config.py
+.idea/
