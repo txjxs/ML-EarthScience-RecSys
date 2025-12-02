@@ -139,7 +139,15 @@ def format_papers_for_neo4j(papers_json):
                     })
 
         # --- De-invert Abstract (NEW) ---
-        raw_abstract_index = paper.get('abstract_inverted_index')
+        raw_abstract_index = padef ingest_batch(driver, papers_list):
+    """Ingests the batch."""
+    try:
+        driver.execute_query(
+            BATCH_CREATE_QUERY,
+            papers_list=papers_list,
+            database_=NEO4J_DATABASE,
+        )
+    except Exceptionper.get('abstract_inverted_index')
         clean_abstract = deinvert_abstract(raw_abstract_index)
 
         papers_list.append({

@@ -12,3 +12,4 @@ data/
 models/
 config.py
 .idea/
+__pycache__/config.cpython-313.pyc

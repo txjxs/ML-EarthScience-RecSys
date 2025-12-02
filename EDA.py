@@ -228,6 +228,18 @@ print(f"Total unique datasets found: {len(dataset_counts)}")
 print("\n--- Top 10 Most Used Datasets ---")
 print(dataset_counts.head(10))
 #%%
+top_10_data = dataset_counts.head(10)
+
+# Create the bar plot
+plt.figure(figsize=(10, 6))
+sns.barplot(x=top_10_data.values, y=top_10_data.index, palette="mako")
+
+# Add titles and labels
+plt.title('Top 10 Most Common Datasets', fontsize=16)
+plt.xlabel('Number of Papers', fontsize=12)
+plt.ylabel('Dataset Name', fontsize=12)
+plt.show()
+#%%
 # --- 1. Find all paper-to-topic links ---
 # We need to map the *paper's internal ID* to its topic name
 paper_to_topic = {}
@@ -288,7 +300,7 @@ if not heatmap_data_filtered.empty:
     heatmap_matrix = heatmap_data_filtered.pivot(index='Topic', columns='Dataset', values='count').fillna(0)
 
     # --- 8. Plot the heatmap ---
-    plt.figure(figsize=(18, 14))  # Make it big to be readable
+    plt.figure(figsize=(20, 16))  # Make it big to be readable
     sns.heatmap(
         heatmap_matrix,
         annot=True,  # Show the numbers in the cells
