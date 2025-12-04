@@ -1,15 +1,20 @@
+# Security
+config.py
+.env
+
+# Python
+__pycache__/
+*.pyc
 .venv/
-pycache/
-*.log
-*.sqlite
-.DS_Store
-*.json
-*.csv
+.idea/
+
+# Large Model Files (Do NOT commit these)
 *.pt
 *.pth
-*.h5
+*.bin
+
+
+# System
+.DS_Store
 data/
-models/
-config.py
-.idea/
-__pycache__/config.cpython-313.pyc
+
